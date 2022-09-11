@@ -1,5 +1,5 @@
 # face-guided-diffusion
-Diffusion Models Beat GANs on Image Synthesis (guided diffusion)
+Diffusion Models Beat GANs on Image Synthesis (guided-diffusion)
 
 ## Introduction
 --------------
@@ -9,7 +9,7 @@ Unofficial guided diffusion implemented by Mingtao Guo
 Paper: [Diffusion Models Beat GANs on Image Synthesis](https://arxiv.org/pdf/2105.05233.pdf)
 
 ## Training diffusion model
-Download the [Celeba](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset
+Download the [Celeba](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset.
 ```
 git clone https://github.com/MingtaoGuo/face-guided-diffusion.git
 cd face-guided-diffusion
@@ -25,7 +25,7 @@ python train_classifier.py --path /Data_2/gmt/Dataset/img_align_celeba/ --image_
 ## Sampling from pre-trained models
 We trained the diffusion model about 200,000 iterations with batchsize 16 two days, and the classifier model about 140,000 iterations one day in a single GTX 3090 24GB.
 
-Download the face pre-trained models from [GoogleDrive](), and then put the diffusion model into the folder saved_models, the classifier model into the folder saved_models_classifier
+Download the face pre-trained models from [GoogleDrive](), and then put the diffusion model into the folder saved_models, the classifier model into the folder saved_models_classifier.
 
 #### Sampling without guidance
 ```
