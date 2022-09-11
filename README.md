@@ -43,3 +43,10 @@ python test_with_guidance.py --image_size 64 --num_class 4 --diffusion_model ./s
 |  ----  | ----  |  ----  | ----  |
 | ![](https://github.com/MingtaoGuo/face-guided-diffusion/raw/main/resources/out_0.png) | ![](https://github.com/MingtaoGuo/face-guided-diffusion/raw/main/resources/out_1.png) |![](https://github.com/MingtaoGuo/face-guided-diffusion/raw/main/resources/out_2.png)  | ![](https://github.com/MingtaoGuo/face-guided-diffusion/raw/main/resources/out_3.png) |
 
+## Acknowledgements
+* Official pytorch implementation [improved-diffusion](https://github.com/openai/improved-diffusion)
+* Official pytorch implementation [guided-diffusion](https://github.com/openai/guided-diffusion)
+* Unofficial pytorch implementation [ddpm](https://github.com/lucidrains/denoising-diffusion-pytorch)
+## Author 
+Mingtao Guo
+E-mail: gmt798714378@hotmail.com
