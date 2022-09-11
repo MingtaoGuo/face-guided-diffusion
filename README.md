@@ -23,12 +23,23 @@ python train_classifier.py --path /Data_2/gmt/Dataset/img_align_celeba/ --image_
 ```
 
 ## Sampling from pre-trained models
+We trained the diffusion model about 200,000 iterations with batchsize 16 two days, and the classifier model about 140,000 iterations one day in a single GTX 3090 24GB.
+
 Download the face pre-trained models from [GoogleDrive](), and then put the diffusion model into the folder saved_models, the classifier model into the folder saved_models_classifier
 
 #### Sampling without guidance
 ```
-python test_without_guidance.py --image_size 64 --num_sample 250 --diffusion_model ./saved_models/model_40000.pth --device cuda
+python test_without_guidance.py --image_size 64 --num_sample 250 --diffusion_model ./saved_models/model_200000.pth --device cuda
 ```
-![](https://github.com/MingtaoGuo/face-guided-diffusion/raw/main/resources/no_guidance.png)
+|   1  | 2  |   3  | 4  |
+|  ----  | ----  |  ----  | ----  |
+|![](https://github.com/MingtaoGuo/face-guided-diffusion/raw/main/resources/no_guidance.png)|![](https://github.com/MingtaoGuo/face-guided-diffusion/raw/main/resources/no_guidance1.png)|![](https://github.com/MingtaoGuo/face-guided-diffusion/raw/main/resources/no_guidance2.png)|![](https://github.com/MingtaoGuo/face-guided-diffusion/raw/main/resources/no_guidance3.png)|
 
+#### Sampling with guidance
+```
+python test_with_guidance.py --image_size 64 --num_class 4 --diffusion_model ./saved_models/model_200000.pth --classifier_model ./saved_models_classifier/model_0.9147636217948718.pth --num_sample 250 --label 0 --grad_scale 5
+```
+|  Black_Hair   | Blond_Hair  |  Brown_Hair   | Gray_Hair  |
+|  ----  | ----  |  ----  | ----  |
+| ![](https://github.com/MingtaoGuo/face-guided-diffusion/raw/main/resources/out_0.png) | ![](https://github.com/MingtaoGuo/face-guided-diffusion/raw/main/resources/out_1.png) |![](https://github.com/MingtaoGuo/face-guided-diffusion/raw/main/resources/out_2.png)  | ![](https://github.com/MingtaoGuo/face-guided-diffusion/raw/main/resources/out_3.png) |
 
