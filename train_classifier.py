@@ -46,7 +46,7 @@ def train(image_size, batchsize, epoch, num_class, path, train_path, val_path, r
     dataset_val = Dataset_celeba_with_label(img_path=path, anno_path=val_path, image_size=image_size)
     model = UNetEncoder(image_size=image_size, 
                         in_channel=3, 
-                        out_channel=num_class, # [pred_noise, pred_log_var_frac]
+                        out_channel=num_class, 
                         model_channel=model_channel, 
                         channel_mult=channel_mult, 
                         attention_resolutions=attention_resolution, 
